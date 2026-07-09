@@ -1,54 +1,54 @@
-# Kakuyomu Scraper
+# Kakuyomu Scraper（カクヨム下载器）
 
-> Download all episodes from a [Kakuyomu](https://kakuyomu.jp/) novel as individual text files. Zero dependencies.
+> 下载 [Kakuyomu](https://kakuyomu.jp/) 小说的全部章节为独立文本文件。零依赖。
 
-**English** | [**中文简体**](./docs/cn/README.md) | [**日本語**](./docs/ja/README.md)
+[**English**](./docs/en/README.md) | **中文简体** | [**日本語**](./docs/ja/README.md)
 
-## Features
+## 功能
 
-- **Zero dependencies** — Python stdlib only (`urllib`, `json`, `re`)
-- **Auto-discovery** — parses `__NEXT_DATA__` JSON from the work page to list all episodes
-- **Clean output** — strips HTML tags, ruby annotations, formats paragraphs as plain text
+- **零依赖** — 仅使用 Python 标准库（`urllib`、`json`、`re`）
+- **自动发现** — 从作品页面的 `__NEXT_DATA__` JSON 中解析全部章节列表
+- **干净输出** — 去除 HTML 标签、注音标记，按段落格式化纯文本
 
-## Quick Start
+## 快速开始
 
 ```bash
 python kakuyomu_scraper.py
 ```
 
-Edit these variables at the top of the script before running:
+运行前修改脚本顶部的以下变量：
 
-| Variable   | Description                          |
-|------------|--------------------------------------|
-| `WORK_ID`  | Kakuyomu work ID (from URL)          |
-| `WORK_URL` | Full work page URL                   |
-| `OUT_DIR`  | Output directory for `.txt` files    |
-| `DELAY`    | Seconds between requests (default 0.5) |
+| 变量       | 说明                         |
+|------------|------------------------------|
+| `WORK_ID`  | Kakuyomu 作品 ID（从 URL 获取） |
+| `WORK_URL` | 作品页完整 URL                |
+| `OUT_DIR`  | `.txt` 文件输出目录           |
+| `DELAY`    | 请求间隔秒数（默认 0.5）      |
 
-## Output
+## 输出格式
 
-Each episode saved as `001.txt`, `002.txt`, ... with metadata header:
+每章保存为 `001.txt`、`002.txt` …，包含元数据头部：
 
 ```
 # URL: https://kakuyomu.jp/works/.../episodes/...
-# Chapter: <chapter name>
-# Title: <episode title>
+# Chapter: <章节名>
+# Title: <标题>
 
-<body text>
+<正文>
 ```
 
-## File Structure
+## 文件结构
 
 ```
 kakuyomu-scraper/
-├── kakuyomu_scraper.py     # Main script
+├── kakuyomu_scraper.py     # 主脚本
 ├── docs/
-│   ├── cn/README.md        # 中文简体
+│   ├── en/README.md        # English
 │   └── ja/README.md        # 日本語
 ├── README.md
 └── .gitignore
 ```
 
-## License
+## 许可证
 
 MIT

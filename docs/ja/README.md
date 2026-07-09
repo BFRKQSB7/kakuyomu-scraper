@@ -2,7 +2,7 @@
 
 > [カクヨム](https://kakuyomu.jp/)の小説を全話まとめてテキストファイルに保存。依存ライブラリなし。
 
-[**English**](../../README.md) | [**中文简体**](../cn/README.md) | **日本語**
+[**English**](../en/README.md) | [**中文简体**](../../README.md) | **日本語**
 
 ## 機能
 
@@ -43,7 +43,7 @@ python kakuyomu_scraper.py
 kakuyomu-scraper/
 ├── kakuyomu_scraper.py     # メインスクリプト
 ├── docs/
-│   ├── cn/README.md        # 中文简体
+│   ├── en/README.md        # English
 │   └── ja/README.md        # 日本語
 ├── README.md
 └── .gitignore
