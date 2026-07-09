@@ -1,18 +1,22 @@
 # Kakuyomu Scraper
 
-Download all episodes from a [Kakuyomu](https://kakuyomu.jp/) novel as individual text files.
+> Download all episodes from a [Kakuyomu](https://kakuyomu.jp/) novel as individual text files. Zero dependencies.
 
-Zero dependencies — Python stdlib only (urllib, json, re).
+**English** | [**中文简体**](./docs/cn/README.md) | [**日本語**](./docs/ja/README.md)
 
-## Usage
+## Features
+
+- **Zero dependencies** — Python stdlib only (`urllib`, `json`, `re`)
+- **Auto-discovery** — parses `__NEXT_DATA__` JSON from the work page to list all episodes
+- **Clean output** — strips HTML tags, ruby annotations, formats paragraphs as plain text
+
+## Quick Start
 
 ```bash
 python kakuyomu_scraper.py
 ```
 
-Edit `WORK_ID`, `WORK_URL`, and `OUT_DIR` at the top of the script before running.
-
-## Config
+Edit these variables at the top of the script before running:
 
 | Variable   | Description                          |
 |------------|--------------------------------------|
@@ -32,3 +36,19 @@ Each episode saved as `001.txt`, `002.txt`, ... with metadata header:
 
 <body text>
 ```
+
+## File Structure
+
+```
+kakuyomu-scraper/
+├── kakuyomu_scraper.py     # Main script
+├── docs/
+│   ├── cn/README.md        # 中文简体
+│   └── ja/README.md        # 日本語
+├── README.md
+└── .gitignore
+```
+
+## License
+
+MIT
